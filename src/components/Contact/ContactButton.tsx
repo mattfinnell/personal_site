@@ -19,11 +19,11 @@ const ContactButton: FC<ContactButtonProps> = () => {
         fontSize={"sm"}
         fontWeight={600}
         color={"white"}
-        bg={"pink.400"}
+        bg={"green.400"}
         href={"#"}
         onClick={onOpen}
         _hover={{
-          bg: "pink.300",
+          bg: "green.300",
         }}
       >
         Contact

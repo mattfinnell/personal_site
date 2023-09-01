@@ -2,6 +2,7 @@ import {
   Box,
   Collapse,
   Flex,
+  HStack,
   Icon,
   IconButton,
   Popover,
@@ -24,6 +25,7 @@ import {
 import { FC } from "react";
 import { Link } from "react-router-dom";
 import ContactButton from "../Contact/ContactButton";
+import ThemeSwitch from "../ThemeSwitch/ThemeSwitch";
 import { RouteType, routes } from "./routes";
 
 type NavigationBarProps = {
@@ -65,17 +67,18 @@ const NavigationBar: FC<NavigationBarProps> = ({ routes }) => {
             fontFamily={"heading"}
             color={useColorModeValue("gray.800", "white")}
           >
-            <Link to="/">Logo</Link>
+            <Link to="/">Matt Finnell</Link>
           </Text>
 
           <Flex display={{ base: "none", md: "flex" }} ml={10}>
             <DesktopNav routes={routes} />
           </Flex>
         </Flex>
-
-        <ContactButton />
+        <HStack spacing={4}>
+          <ThemeSwitch />
+          <ContactButton />
+        </HStack>
       </Flex>
-
       <Collapse in={isOpen} animateOpacity>
         <MobileNav routes={routes} />
       </Collapse>
