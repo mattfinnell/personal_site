@@ -9,7 +9,6 @@ export type RouteType = {
   children?: Array<RouteType>;
   path: string;
   component: FC<any>;
-  authRequired?: boolean;
 };
 
 export const routes: Array<RouteType> = [
@@ -22,12 +21,10 @@ export const routes: Array<RouteType> = [
     label: "Profile",
     path: "/profile",
     component: Profile,
-    authRequired: true,
   },
   {
     label: "Confetti",
     path: "/confetti",
     component: Confetti,
-    authRequired: true,
   },
-].map((route) => ({ ...route, hidden: route.authRequired === true }));
+];

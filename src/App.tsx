@@ -3,6 +3,7 @@ import { BrowserRouter, Route, Routes } from "react-router-dom";
 import "./App.css";
 
 import { FC } from "react";
+import Footer from "./components/Footer/Footer";
 import { NavigationBarContainer } from "./components/Navigation/NavigationBar";
 import { routes } from "./components/Navigation/routes";
 
@@ -13,13 +14,14 @@ const App: FC<AppProps> = () => {
       <BrowserRouter>
         <div className="App">
           <NavigationBarContainer />
-          <Container maxWidth="container.xl" marginTop="12">
+          <Container maxWidth="container.xl" marginTop="12" minHeight="75vh">
             <Routes>
               {routes.map((route) => (
                 <Route path={route.path} Component={route.component} />
               ))}
             </Routes>
           </Container>
+          <Footer />
         </div>
       </BrowserRouter>
     </ChakraProvider>

@@ -69,7 +69,6 @@ const NavigationBar: FC<NavigationBarProps> = ({ routes }) => {
           >
             <Link to="/">Matt Finnell</Link>
           </Text>
-
           <Flex display={{ base: "none", md: "flex" }} ml={10}>
             <DesktopNav routes={routes} />
           </Flex>
