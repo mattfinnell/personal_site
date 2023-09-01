@@ -1,0 +1,49 @@
+// For format details, see https://aka.ms/devcontainer.json. For config options, see the
+// README at: https://github.com/devcontainers/templates/tree/main/src/typescript-node
+{
+  "name": "Personal Site DevContainer",
+  "image": "mcr.microsoft.com/devcontainers/typescript-node",
+
+  // Configure tool-specific properties.
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "dbaeumer.vscode-eslint",
+        "esbenp.prettier-vscode",
+        "oderwat.indent-rainbow",
+        "aaron-bond.better-comments"
+      ],
+      "settings": {
+        "editor.formatOnSave": true,
+        "editor.tabSize": 2,
+        "editor.defaultFormatter": "esbenp.prettier-vscode",
+        "editor.codeActionsOnSave": {
+          "source.organizeImports": true
+        },
+        "indentRainbow.indicatorStyle": "light",
+        "indentRainbow.lightIndicatorStyleLineWidth": 1,
+        "indentRainbow.colors": [
+          "rgba(255,255,64,0.2)",
+          "rgba(127,255,127,0.2)",
+          "rgba(255,127,255,0.2)",
+          "rgba(79,236,236,0.2)"
+        ]
+      }
+    }
+  },
+
+  // Use 'postCreateCommand' to run commands after the container is created.
+  "postCreateCommand": "bash scripts/generate_github_key.sh",
+  "postAttachCommand": "yarn install && yarn start",
+
+  // Features to add to the dev container. More info: https://containers.dev/features.
+  "features": {
+    "ghcr.io/devcontainers-contrib/features/pre-commit:2": {}
+  }
+
+  // Use 'forwardPorts' to make a list of ports inside the container available locally.
+  // "forwardPorts": [],
+
+  // Uncomment to connect as root instead. More info: https://aka.ms/dev-containers-non-root.
+  // "remoteUser": "root"
+}
