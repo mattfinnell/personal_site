@@ -1,6 +1,5 @@
 import { ChakraProvider, Container } from "@chakra-ui/react";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
-import "./App.css";
 
 import { FC } from "react";
 import Footer from "./components/Footer/Footer";

@@ -1,16 +1,13 @@
 import {
-  Box,
-  Button,
-  Flex,
   Modal,
   ModalBody,
   ModalCloseButton,
   ModalContent,
-  ModalFooter,
   ModalHeader,
   ModalOverlay,
 } from "@chakra-ui/react";
 import { FC } from "react";
+import ContactForm from "./ContactForm";
 
 type OptionalLoginModalProps = {
   onSuccess?: () => void;
@@ -26,19 +23,12 @@ const ContactModal: FC<ContactModalProps> = ({ isOpen, onClose }) => {
   return (
     <Modal isOpen={isOpen} onClose={onClose}>
       <ModalOverlay />
-      <ModalContent>
-        <ModalHeader>Contact</ModalHeader>
+      <ModalContent maxWidth="800px">
+        <ModalHeader></ModalHeader>
         <ModalCloseButton />
         <ModalBody>
-          <Flex bg="gray.100" align="center" justify="center" h="75vh">
-            <Box bg="white" p={4} rounded="md" w={64}></Box>
-          </Flex>
+          <ContactForm onSuccess={onClose} onFailure={() => {}} />
         </ModalBody>
-        <ModalFooter>
-          <Button colorScheme="blue" mr={3} onClick={onClose}>
-            Close
-          </Button>
-        </ModalFooter>
       </ModalContent>
     </Modal>
   );
