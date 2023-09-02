@@ -1,9 +1,10 @@
-import { Button, Stack, useDisclosure } from "@chakra-ui/react";
+import { Avatar, Button, Stack, useDisclosure } from "@chakra-ui/react";
 import { FC } from "react";
+import profilePicture from "../../assets/profile_photo.png";
 import ContactModal from "./ContactModal";
 
-type ContactButtonProps = {};
-const ContactButton: FC<ContactButtonProps> = () => {
+type ContactAvatarButtonProps = {};
+const ContactAvatarButton: FC<ContactAvatarButtonProps> = () => {
   const { isOpen, onOpen, onClose } = useDisclosure();
 
   return (
@@ -14,19 +15,13 @@ const ContactButton: FC<ContactButtonProps> = () => {
       spacing={6}
     >
       <Button
-        as={"a"}
-        display={{ base: "none", md: "inline-flex" }}
-        fontSize={"sm"}
-        fontWeight={600}
-        color={"white"}
-        bg={"green.400"}
-        href={"#"}
+        rounded={"full"}
+        variant={"link"}
+        cursor={"pointer"}
+        minW={0}
         onClick={onOpen}
-        _hover={{
-          bg: "green.300",
-        }}
       >
-        Contact
+        <Avatar size={"sm"} src={profilePicture} />
       </Button>
       <ContactModal
         isOpen={isOpen}
@@ -39,4 +34,4 @@ const ContactButton: FC<ContactButtonProps> = () => {
   );
 };
 
-export default ContactButton;
+export default ContactAvatarButton;
