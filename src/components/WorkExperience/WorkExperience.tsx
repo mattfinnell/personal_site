@@ -12,7 +12,7 @@ const WorkExperience: FC<WorkExperienceProps> = () => {
       justify="space-between"
       direction={{ base: "column", lg: "row" }}
     >
-      <SimpleGrid columns={2} spacing={10}>
+      <SimpleGrid columns={{ base: 1, lg: 2 }} spacing={10}>
         {resume.jobs.map((job) => (
           <Job
             thumbnail={job.thumbnail}

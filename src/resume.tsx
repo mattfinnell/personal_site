@@ -9,11 +9,61 @@ type JobType = {
   skills: Array<string>;
 };
 
+export type Skill = {
+  skillName: string;
+  comfort: number;
+  experience: number;
+};
+
+type Skills = {
+  frontend: Array<Skill>;
+  backend: Array<Skill>;
+  devops: Array<Skill>;
+};
+
 type ResumeType = {
   jobs: Array<JobType>;
+  skills: Skills;
 };
 
 const resume: ResumeType = {
+  skills: {
+    frontend: [
+      { skillName: "React", comfort: 90, experience: 4 },
+      { skillName: "HTML", comfort: 90, experience: 7 },
+      { skillName: "CSS", comfort: 60, experience: 7 },
+      { skillName: "Typescript", comfort: 80, experience: 4 },
+      { skillName: "Cypress", comfort: 60, experience: 1 },
+      { skillName: "Storybook", comfort: 60, experience: 1 },
+      { skillName: "Design Systems", comfort: 90, experience: 5 },
+      { skillName: "Responsive Design", comfort: 80, experience: 5 },
+      { skillName: "React Query", comfort: 70, experience: 1 },
+      { skillName: "REST Frameworks", comfort: 80, experience: 1 },
+      { skillName: "GraphQL", comfort: 60, experience: 2 },
+    ],
+    backend: [
+      { skillName: "Python", comfort: 90, experience: 5 },
+      { skillName: "Unix", comfort: 80, experience: 7 },
+      { skillName: "Django", comfort: 60, experience: 7 },
+      { skillName: "DjangoRestFramework", comfort: 80, experience: 4 },
+      { skillName: "Firebase", comfort: 60, experience: 1 },
+      { skillName: "RPC", comfort: 60, experience: 1 },
+      { skillName: "SQL", comfort: 90, experience: 5 },
+      { skillName: "NoSQL", comfort: 80, experience: 5 },
+      { skillName: "PostgreSQL", comfort: 70, experience: 1 },
+      { skillName: "C#", comfort: 80, experience: 1 },
+      { skillName: "Dotnet Core", comfort: 60, experience: 2 },
+      { skillName: "Hacklang", comfort: 60, experience: 2 },
+    ],
+    devops: [
+      { skillName: "Git", comfort: 90, experience: 5 },
+      { skillName: "Github", comfort: 80, experience: 7 },
+      { skillName: "CI/CD", comfort: 60, experience: 7 },
+      { skillName: "Docker", comfort: 80, experience: 4 },
+      { skillName: "AWS", comfort: 60, experience: 1 },
+      { skillName: "Observability", comfort: 60, experience: 1 },
+    ],
+  },
   jobs: [
     {
       thumbnail:
@@ -79,11 +129,40 @@ const resume: ResumeType = {
       position: "Software Engineer",
       description: (
         <Text>
-          Contributed for the MgAlpha product. Built the Economic Scenario
+          Contributed to the MgAlpha product. Built the Economic Scenario
           Forecasting feature from start to finish.
         </Text>
       ),
       skills: ["C#", "Angular", "WPF", "CI/CD", "Azure"],
+    },
+    {
+      thumbnail:
+        "https://www.tagnw.org/wp-content/uploads/2021/09/TAGNW-logo-horiz-primary.png",
+      company: "Technology Alliance Group (NW)",
+      position: "Backend Developer",
+      description: (
+        <Text>
+          Synchronized Event, CRM, and Payment Data via associated 3rd party
+          API's.
+        </Text>
+      ),
+      skills: ["Python", "Flask", "RESTful Webservices", "Wordpress"],
+    },
+    {
+      thumbnail:
+        "https://payload.cargocollective.com/1/1/54817/7995435/SPIE_black.png",
+      company: "SPIE",
+      position: "Frontend Developer",
+      description: <Text>Redesigned the landing website.</Text>,
+      skills: ["C#", "Razor", ".NET", "IIS", "HTML", "CSS", "Javascript"],
+    },
+    {
+      thumbnail:
+        "https://ww1.prweb.com/prfiles/2014/10/14/12249916/RR%20Square%20Large.png",
+      company: "Prepared Response",
+      position: "Frontend Developer",
+      description: <Text>Redesigned the landing website.</Text>,
+      skills: ["HTML", "CSS", "Javascript", "git"],
     },
   ],
 };

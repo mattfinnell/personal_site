@@ -1,4 +1,3 @@
-import { Box, Tag, TagLabel } from "@chakra-ui/react";
 import { IconProp } from "@fortawesome/fontawesome-svg-core";
 import {
   faAngular,
@@ -12,8 +11,6 @@ import {
   faPython,
   faReact,
 } from "@fortawesome/free-brands-svg-icons";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { FC } from "react";
 
 const fontAwesomeIconRegistry: Array<[string, IconProp]> = [
   ["python", faPython],
@@ -34,18 +31,4 @@ fontAwesomeIconRegistry.forEach(([key, value]: [string, IconProp]) =>
   fontAwesomeIconMap.set(key, value),
 );
 
-type SkillChipProps = {
-  label: string;
-};
-const SkillChip: FC<SkillChipProps> = ({ label }) => {
-  const icon = fontAwesomeIconMap.get(label.toLowerCase());
-
-  return (
-    <Tag>
-      <Box marginRight={2}>{icon ? <FontAwesomeIcon icon={icon} /> : null}</Box>
-      <TagLabel>{label}</TagLabel>
-    </Tag>
-  );
-};
-
-export default SkillChip;
+export default fontAwesomeIconMap;

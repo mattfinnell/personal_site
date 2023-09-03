@@ -28,14 +28,14 @@ const About: FC<AboutProps> = () => {
       <Box maxWidth={{ lg: "36rem" }}>
         {/* Circular Headshot */}
         <Circle
-          display={{ base: "none", lg: "flex" }}
+          display={{ base: "flex" }}
           position={"relative"}
           size="6.25rem"
           float="left"
           marginRight="6"
           overflow="hidden"
         >
-          <Avatar size={"2xl"} src={profilePhoto} mb={-2} pos={"relative"} />
+          <Avatar size={"xl"} src={profilePhoto} />
         </Circle>
 
         <Heading

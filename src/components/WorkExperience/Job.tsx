@@ -8,7 +8,7 @@ import {
   VStack,
 } from "@chakra-ui/react";
 import { FC, ReactNode } from "react";
-import SkillChip from "../Misc/SkillChip";
+import SkillChip from "../Skills/SkillChip";
 
 type JobProps = {
   thumbnail: string;
@@ -24,13 +24,12 @@ const Job: FC<JobProps> = ({
   description,
   skills,
 }) => (
-  <Card padding={8} maxW="40vw">
+  <Card padding={8} maxW={{ lg: "40vw" }}>
     <VStack alignItems="left">
       <HStack>
         <Square
-          display={{ base: "none", lg: "flex" }}
           position={"relative"}
-          size="5rem"
+          size="4rem"
           float="left"
           marginRight="6"
           overflow="hidden"
@@ -42,7 +41,7 @@ const Job: FC<JobProps> = ({
             fallbackSrc="https://via.placeholder.com/100"
           />
         </Square>
-        <Heading>{company}</Heading>
+        <Heading size="lg">{company}</Heading>
       </HStack>
       <Text fontSize="2xl">{position}</Text>
       <Text>{description}</Text>

@@ -1,4 +1,5 @@
 import { FC } from "react";
+import Skills from "../Skills/Skills";
 import WorkExperience from "../WorkExperience/WorkExperience";
 import About from "./About";
 import { ProfileHeader } from "./Header";
@@ -10,7 +11,7 @@ const Home: FC<HomeProps> = () => {
       <ProfileHeader />
       <About />
       <WorkExperience />
-      {/* <Skills /> */}
+      <Skills />
     </>
   );
 };

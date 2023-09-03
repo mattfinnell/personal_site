@@ -5,9 +5,11 @@ import { Emoji, MainHeading } from "../Misc/Misc";
 type ProfileHeaderProps = {};
 export const ProfileHeader: FC<ProfileHeaderProps> = () => {
   return (
-    <Flex direction="column" paddingY="24">
+    <Flex direction="column" paddingY="24" alignItems={{}}>
       <Box>
-        <MainHeading>Matt Finnell</MainHeading>
+        <Flex>
+          <MainHeading>Matt Finnell</MainHeading>
+        </Flex>
         <Text
           color="brown.600"
           display="block"
