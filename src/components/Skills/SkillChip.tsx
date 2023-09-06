@@ -14,7 +14,7 @@ const SkillChip: FC<SkillChipProps> = ({ label }) => {
       <Box marginRight={icon ? 2 : 0}>
         {icon ? <FontAwesomeIcon icon={icon} /> : null}
       </Box>
-      <TagLabel>{label}</TagLabel>
+      <TagLabel fontSize={12}>{label}</TagLabel>
     </Tag>
   );
 };

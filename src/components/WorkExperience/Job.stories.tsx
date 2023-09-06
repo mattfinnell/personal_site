@@ -1,10 +1,10 @@
 import { Text } from "@chakra-ui/react";
 import type { Meta, StoryObj } from "@storybook/react";
-import Job from "./Job";
+import JobCard from "./JobCard";
 
 const meta = {
   title: "Application/Job",
-  component: Job,
+  component: JobCard,
   decorators: [],
   parameters: {
     layout: "centered",
@@ -12,7 +12,7 @@ const meta = {
   tags: ["autodocs"],
   // More on argTypes: https://storybook.js.org/docs/react/api/argtypes
   argTypes: {},
-} satisfies Meta<typeof Job>;
+} satisfies Meta<typeof JobCard>;
 
 export default meta;
 type Story = StoryObj<typeof meta>;

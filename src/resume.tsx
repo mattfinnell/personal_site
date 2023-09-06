@@ -38,28 +38,26 @@ const resume: ResumeType = {
       { skillName: "Design Systems", comfort: 90, experience: 5 },
       { skillName: "Responsive Design", comfort: 80, experience: 5 },
       { skillName: "React Query", comfort: 70, experience: 1 },
-      { skillName: "REST Frameworks", comfort: 80, experience: 1 },
+      { skillName: "REST Clients", comfort: 80, experience: 5 },
       { skillName: "GraphQL", comfort: 60, experience: 2 },
     ],
     backend: [
       { skillName: "Python", comfort: 90, experience: 5 },
-      { skillName: "Unix", comfort: 80, experience: 7 },
-      { skillName: "Django", comfort: 60, experience: 7 },
-      { skillName: "DjangoRestFramework", comfort: 80, experience: 4 },
+      { skillName: "Linux", comfort: 80, experience: 7 },
+      { skillName: "Django", comfort: 60, experience: 4 },
+      { skillName: "REST APIs", comfort: 70, experience: 5 },
       { skillName: "Firebase", comfort: 60, experience: 1 },
-      { skillName: "RPC", comfort: 60, experience: 1 },
-      { skillName: "SQL", comfort: 90, experience: 5 },
-      { skillName: "NoSQL", comfort: 80, experience: 5 },
-      { skillName: "PostgreSQL", comfort: 70, experience: 1 },
-      { skillName: "C#", comfort: 80, experience: 1 },
-      { skillName: "Dotnet Core", comfort: 60, experience: 2 },
-      { skillName: "Hacklang", comfort: 60, experience: 2 },
+      { skillName: "Redis", comfort: 60, experience: 1 },
+      { skillName: "NoSQL", comfort: 70, experience: 4 },
+      { skillName: "PostgreSQL", comfort: 70, experience: 4 },
+      { skillName: "C#", comfort: 70, experience: 2 },
+      { skillName: "Dotnet Core", comfort: 70, experience: 2 },
     ],
     devops: [
-      { skillName: "Git", comfort: 90, experience: 5 },
-      { skillName: "Github", comfort: 80, experience: 7 },
-      { skillName: "CI/CD", comfort: 60, experience: 7 },
-      { skillName: "Docker", comfort: 80, experience: 4 },
+      { skillName: "Git", comfort: 90, experience: 7 },
+      { skillName: "Github", comfort: 90, experience: 7 },
+      { skillName: "CI/CD", comfort: 70, experience: 5 },
+      { skillName: "Docker", comfort: 70, experience: 4 },
       { skillName: "AWS", comfort: 60, experience: 1 },
       { skillName: "Observability", comfort: 60, experience: 1 },
     ],
@@ -81,7 +79,6 @@ const resume: ResumeType = {
         "Typescript",
         "Python",
         "Django",
-        "Django Rest Framework",
         "PostgreSQL",
         "Datadog",
       ],
@@ -102,7 +99,7 @@ const resume: ResumeType = {
         "React",
         "Python",
         "Javascript",
-        "HackLang",
+        "PHP",
         "CI/CD",
         "Containerization",
         "MySQL",
@@ -120,7 +117,7 @@ const resume: ResumeType = {
           inspected each layer of an SLP / NLP request.
         </Text>
       ),
-      skills: ["React", "Javascript", "HackLang", "MySQL"],
+      skills: ["React", "Javascript", "PHP", "MySQL"],
     },
     {
       thumbnail:
@@ -133,7 +130,7 @@ const resume: ResumeType = {
           Forecasting feature from start to finish.
         </Text>
       ),
-      skills: ["C#", "Angular", "WPF", "CI/CD", "Azure"],
+      skills: ["C#", "Angular", "WPF", "CI/CD", "Azure", "Git"],
     },
     {
       thumbnail:
@@ -146,7 +143,7 @@ const resume: ResumeType = {
           API's.
         </Text>
       ),
-      skills: ["Python", "Flask", "RESTful Webservices", "Wordpress"],
+      skills: ["Python", "Flask", "RESTful Webservices", "Wordpress", "Git"],
     },
     {
       thumbnail:

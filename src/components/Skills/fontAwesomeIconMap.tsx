@@ -5,8 +5,10 @@ import {
   faCss3,
   faDocker,
   faGit,
+  faGithub,
   faHtml5,
   faJs,
+  faLinux,
   faPhp,
   faPython,
   faReact,
@@ -15,6 +17,7 @@ import {
 const fontAwesomeIconRegistry: Array<[string, IconProp]> = [
   ["python", faPython],
   ["hacklang", faPhp],
+  ["php", faPhp],
   ["html", faHtml5],
   ["css", faCss3],
   ["javascript", faJs],
@@ -24,6 +27,8 @@ const fontAwesomeIconRegistry: Array<[string, IconProp]> = [
   ["react", faReact],
   ["docker", faDocker],
   ["angular", faAngular],
+  ["linux", faLinux],
+  ["github", faGithub],
 ];
 
 const fontAwesomeIconMap = new Map<string, IconProp>();

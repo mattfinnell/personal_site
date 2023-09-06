@@ -1,4 +1,5 @@
 import { FC } from "react";
+import ContactSection from "../Contact/ContactSection";
 import Skills from "../Skills/Skills";
 import WorkExperience from "../WorkExperience/WorkExperience";
 import About from "./About";
@@ -12,6 +13,7 @@ const Home: FC<HomeProps> = () => {
       <About />
       <WorkExperience />
       <Skills />
+      <ContactSection />
     </>
   );
 };

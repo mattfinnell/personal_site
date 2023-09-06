@@ -12,7 +12,7 @@ import { MdEmail } from "react-icons/md";
 
 type SocialIconsProps = {};
 const SocialIcons: FC<SocialIconsProps> = () => {
-  const { hasCopied, onCopy } = useClipboard("mattfinnell104@gmail.com");
+  const { hasCopied, onCopy } = useClipboard("matt.finnell.eng@gmail.com");
   return (
     <Stack spacing={{ base: 4, md: 8 }} direction={{ base: "column" }}>
       <Stack align="center" justify="space-around" direction={{ base: "row" }}>
