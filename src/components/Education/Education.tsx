@@ -15,7 +15,9 @@ import {
   VStack,
 } from "@chakra-ui/react";
 import { FC } from "react";
+import resume from "../../resume";
 import SectionDivider from "../Misc/SectionDivider";
+const _ = require("lodash");
 
 type EducationProps = {};
 const Education: FC<EducationProps> = () => {
@@ -24,8 +26,8 @@ const Education: FC<EducationProps> = () => {
       <SectionDivider>
         <Heading>Education</Heading>
       </SectionDivider>
-      <Card marginTop={16} padding={8} maxW={{ lg: "40vw" }}>
-        <VStack alignItems="left">
+      <Card marginTop={16} padding={8}>
+        <VStack alignItems={{ base: "left" }}>
           <HStack>
             <Square
               position={"relative"}
@@ -37,32 +39,33 @@ const Education: FC<EducationProps> = () => {
               <Image
                 boxSize="100px"
                 objectFit="scale-down"
-                src="https://d28htnjz2elwuj.cloudfront.net/wp-content/uploads/2017/09/29151258/Western-logo_no-background.png"
+                src={resume.education.thumbnail}
                 fallbackSrc="https://via.placeholder.com/100"
                 backgroundColor="white"
               />
             </Square>
-            <Heading size="lg">Western Washington University</Heading>
+            <Heading size="lg">{resume.education.school_name}</Heading>
             <Spacer />
             <Text>
-              <i>Fall 2011 - Spring 2016</i>
+              <i>
+                {resume.education.arrival} - {resume.education.departure}
+              </i>
             </Text>
           </HStack>
-          <Text fontSize="2xl">Computer Science</Text>
+          <Text marginTop="4" fontSize="2xl">
+            {resume.education.focus}
+          </Text>
           <TableContainer>
             <Table size="sm">
-              <Tr>
-                <Td>Datastructures + Algorithms II</Td>
-                <Td>Database Systems</Td>
-                <Td>Unix Development</Td>
-                <Td>Object Oriented Design</Td>
-              </Tr>
-              <Tr>
-                <Td>Statistical Methods</Td>
-                <Td>Machine Learning</Td>
-                <Td>Artificial Intelligence</Td>
-                <Td>Data Mining</Td>
-              </Tr>
+              {_.chunk(resume.education.courses, 4).map(
+                (courseRow: Array<string>) => (
+                  <Tr>
+                    {courseRow.map((course) => (
+                      <Td>{course}</Td>
+                    ))}
+                  </Tr>
+                ),
+              )}
             </Table>
           </TableContainer>
           <SimpleGrid

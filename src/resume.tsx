@@ -28,13 +28,41 @@ type ContactInformationType = {
   resume: string;
 };
 
+type EducationType = {
+  thumbnail: string;
+  school_name: string;
+  arrival: string;
+  departure: string;
+  focus: string;
+  courses: Array<string>;
+};
+
 type ResumeType = {
   jobs: Array<JobType>;
   skills: Skills;
   contact: ContactInformationType;
+  education: EducationType;
 };
 
 const resume: ResumeType = {
+  education: {
+    thumbnail:
+      "https://d28htnjz2elwuj.cloudfront.net/wp-content/uploads/2017/09/29151258/Western-logo_no-background.png",
+    school_name: "Western Washington University",
+    arrival: "Fall 2011",
+    departure: "Spring 2016",
+    focus: "Computer Science",
+    courses: [
+      "Datastructures + Algorithms II",
+      "Database Systems",
+      "Unix Development",
+      "Object Oriented Design",
+      "Statistical Methods",
+      "Machine Learning",
+      "Artificial Intelligence",
+      "Data Mining",
+    ],
+  },
   contact: {
     github: "http://github.com/mattfinnell",
     linkedin: "https://www.linkedin.com/in/mattfinnell/",
