@@ -10,10 +10,10 @@ import {
   Text,
 } from "@chakra-ui/react";
 import { FC } from "react";
-import siteConfig from "../../siteConfig";
 import { FileIcon, GithubIcon, LinkedInIcon } from "../Misc/SocialIcons";
 
 import profilePhoto from "../../assets/profile_photo.png";
+import resume from "../../resume";
 import { LinkItem } from "../Misc/Misc";
 
 type AboutProps = {};
@@ -59,16 +59,16 @@ const About: FC<AboutProps> = () => {
         {/* Profile links */}
         <Center>
           <SimpleGrid columns={2} marginTop="10" spacing="10" maxWidth="16rem">
-            <LinkItem icon={LinkedInIcon} href={siteConfig.profiles.linkedin}>
+            <LinkItem icon={LinkedInIcon} href={resume.contact.linkedin}>
               LinkedIn
             </LinkItem>
-            <LinkItem icon={GithubIcon} href={siteConfig.profiles.github}>
+            <LinkItem icon={GithubIcon} href={resume.contact.github}>
               Github
             </LinkItem>
-            <LinkItem icon={EmailIcon} href={siteConfig.profiles.email}>
+            <LinkItem icon={EmailIcon} href={resume.contact.email}>
               Email
             </LinkItem>
-            <LinkItem icon={FileIcon} href={siteConfig.profiles.linkedin}>
+            <LinkItem icon={FileIcon} href={resume.contact.linkedin}>
               Resume
             </LinkItem>
           </SimpleGrid>

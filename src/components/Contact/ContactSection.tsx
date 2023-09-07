@@ -1,6 +1,6 @@
 import { Box, HStack, Heading, VStack } from "@chakra-ui/react";
 import { FC } from "react";
-import siteConfig from "../../siteConfig";
+import resume from "../../resume";
 import { LinkItem } from "../Misc/Misc";
 import SectionDivider from "../Misc/SectionDivider";
 import { EmailIcon, GithubIcon, LinkedInIcon } from "../Misc/SocialIcons";
@@ -17,13 +17,13 @@ const ContactSection: FC<ContactSectionProps> = () => {
           Feel free to get a hold of me via the following...
         </Heading>
         <HStack marginTop={8}>
-          <LinkItem icon={LinkedInIcon} href={siteConfig.profiles.linkedin}>
+          <LinkItem icon={LinkedInIcon} href={resume.contact.linkedin}>
             LinkedIn
           </LinkItem>
-          <LinkItem icon={GithubIcon} href={siteConfig.profiles.github}>
+          <LinkItem icon={GithubIcon} href={resume.contact.github}>
             Github
           </LinkItem>
-          <LinkItem icon={EmailIcon} href={siteConfig.profiles.email}>
+          <LinkItem icon={EmailIcon} href={resume.contact.email}>
             Email
           </LinkItem>
         </HStack>

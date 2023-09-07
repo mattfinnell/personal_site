@@ -21,12 +21,26 @@ type Skills = {
   devops: Array<Skill>;
 };
 
+type ContactInformationType = {
+  github: string;
+  linkedin: string;
+  email: string;
+  resume: string;
+};
+
 type ResumeType = {
   jobs: Array<JobType>;
   skills: Skills;
+  contact: ContactInformationType;
 };
 
 const resume: ResumeType = {
+  contact: {
+    github: "http://github.com/mattfinnell",
+    linkedin: "https://www.linkedin.com/in/mattfinnell/",
+    email: "mailto:matt.finnell.eng@gmail.com",
+    resume: "https://www.linkedin.com/in/mattfinnell/",
+  },
   skills: {
     frontend: [
       { skillName: "React", comfort: 90, experience: 4 },
@@ -35,7 +49,6 @@ const resume: ResumeType = {
       { skillName: "Typescript", comfort: 80, experience: 4 },
       { skillName: "Cypress", comfort: 60, experience: 1 },
       { skillName: "Storybook", comfort: 60, experience: 1 },
-      { skillName: "Design Systems", comfort: 90, experience: 5 },
       { skillName: "Responsive Design", comfort: 80, experience: 5 },
       { skillName: "React Query", comfort: 70, experience: 1 },
       { skillName: "REST Clients", comfort: 80, experience: 5 },
@@ -43,7 +56,6 @@ const resume: ResumeType = {
     ],
     backend: [
       { skillName: "Python", comfort: 90, experience: 5 },
-      { skillName: "Linux", comfort: 80, experience: 7 },
       { skillName: "Django", comfort: 60, experience: 4 },
       { skillName: "REST APIs", comfort: 70, experience: 5 },
       { skillName: "Firebase", comfort: 60, experience: 1 },
@@ -54,6 +66,7 @@ const resume: ResumeType = {
       { skillName: "Dotnet Core", comfort: 70, experience: 2 },
     ],
     devops: [
+      { skillName: "Linux", comfort: 80, experience: 7 },
       { skillName: "Git", comfort: 90, experience: 7 },
       { skillName: "Github", comfort: 90, experience: 7 },
       { skillName: "CI/CD", comfort: 70, experience: 5 },
@@ -90,9 +103,9 @@ const resume: ResumeType = {
       position: "Software Engineer II",
       description: (
         <Text>
-          Developed many internal tools for Oculus Research from End to End.
-          Mentored multiple small teams of software engineers across these
-          projects.
+          Backend and Frontend Development on many internal tools for Oculus
+          Research from Start to Finish. Mentored multiple small teams of
+          software engineers across these projects.
         </Text>
       ),
       skills: [
@@ -100,6 +113,7 @@ const resume: ResumeType = {
         "Python",
         "Javascript",
         "PHP",
+        "GraphQL",
         "CI/CD",
         "Containerization",
         "MySQL",
@@ -117,7 +131,7 @@ const resume: ResumeType = {
           inspected each layer of an SLP / NLP request.
         </Text>
       ),
-      skills: ["React", "Javascript", "PHP", "MySQL"],
+      skills: ["React", "Javascript", "PHP", "MySQL", "GraphQL"],
     },
     {
       thumbnail:
@@ -130,7 +144,7 @@ const resume: ResumeType = {
           Forecasting feature from start to finish.
         </Text>
       ),
-      skills: ["C#", "Angular", "WPF", "CI/CD", "Azure", "Git"],
+      skills: ["C#", "Angular", "WPF", "CI/CD", "Azure", "Git", "RESTful APIs"],
     },
     {
       thumbnail:
@@ -139,11 +153,11 @@ const resume: ResumeType = {
       position: "Backend Developer",
       description: (
         <Text>
-          Synchronized Event, CRM, and Payment Data via associated 3rd party
-          API's.
+          Synchronized 3rd Party Event, CRM, and Payment Data via a backend
+          webservice.
         </Text>
       ),
-      skills: ["Python", "Flask", "RESTful Webservices", "Wordpress", "Git"],
+      skills: ["Python", "Flask", "RESTful APIs", "Wordpress", "Git"],
     },
     {
       thumbnail:
@@ -158,7 +172,9 @@ const resume: ResumeType = {
         "https://ww1.prweb.com/prfiles/2014/10/14/12249916/RR%20Square%20Large.png",
       company: "Prepared Response",
       position: "Frontend Developer",
-      description: <Text>Redesigned the landing website.</Text>,
+      description: (
+        <Text>Re-Designed and Re-Implemented the entire website.</Text>
+      ),
       skills: ["HTML", "CSS", "Javascript", "git"],
     },
   ],

@@ -1,5 +1,6 @@
 import { FC } from "react";
 import ContactSection from "../Contact/ContactSection";
+import Education from "../Education/Education";
 import Skills from "../Skills/Skills";
 import WorkExperience from "../WorkExperience/WorkExperience";
 import About from "./About";
@@ -13,6 +14,7 @@ const Home: FC<HomeProps> = () => {
       <About />
       <WorkExperience />
       <Skills />
+      <Education />
       <ContactSection />
     </>
   );

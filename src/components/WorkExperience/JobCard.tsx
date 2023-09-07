@@ -46,7 +46,12 @@ const JobCard: FC<JobCardProps> = ({
       </HStack>
       <Text fontSize="2xl">{position}</Text>
       <Text>{description}</Text>
-      <SimpleGrid marginTop={3} spacingX={3} spacingY={2} columns={5}>
+      <SimpleGrid
+        marginTop={3}
+        spacingX={3}
+        spacingY={2}
+        columns={{ base: 3, md: 5 }}
+      >
         {skills.map((skill) => (
           <SkillChip label={skill} />
         ))}

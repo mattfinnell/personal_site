@@ -1,6 +1,4 @@
 import { FC } from "react";
-import Confetti from "../Confetti/Confetti";
-import Home from "../Home/Home";
 
 export type RouteType = {
   label: string;
@@ -10,15 +8,4 @@ export type RouteType = {
   component: FC<any>;
 };
 
-export const routes: Array<RouteType> = [
-  {
-    label: "Home",
-    path: "/",
-    component: Home,
-  },
-  {
-    label: "Confetti",
-    path: "/confetti",
-    component: Confetti,
-  },
-];
+export const routes: Array<RouteType> = [];

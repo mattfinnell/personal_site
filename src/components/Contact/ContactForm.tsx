@@ -17,15 +17,18 @@ import {
   useColorModeValue,
 } from "@chakra-ui/react";
 import { FC } from "react";
-import { BsGithub, BsLinkedin, BsPerson, BsTwitter } from "react-icons/bs";
+import { AiOutlineFileText } from "react-icons/ai";
+import { BsGithub, BsLinkedin, BsPerson } from "react-icons/bs";
 import { MdEmail, MdOutlineEmail } from "react-icons/md";
+import resume from "../../resume";
 
 type ContactFormProps = {
   onSuccess: () => void;
   onFailure: () => void;
 };
 const ContactForm: FC<ContactFormProps> = ({ onSuccess, onFailure }) => {
-  const { hasCopied, onCopy } = useClipboard("example@example.com");
+  const { hasCopied, onCopy } = useClipboard(resume.contact.email);
+
   return (
     <Flex
       bg={useColorModeValue("gray.100", "gray.900")}
@@ -73,7 +76,7 @@ const ContactForm: FC<ContactFormProps> = ({ onSuccess, onFailure }) => {
                   />
                 </Tooltip>
 
-                <Box as="a" href="#">
+                <Box as="a" href={resume.contact.github}>
                   <IconButton
                     aria-label="github"
                     variant="ghost"
@@ -88,12 +91,12 @@ const ContactForm: FC<ContactFormProps> = ({ onSuccess, onFailure }) => {
                   />
                 </Box>
 
-                <Box as="a" href="#">
+                <Box as="a" href={resume.contact.linkedin}>
                   <IconButton
-                    aria-label="twitter"
+                    aria-label="resume"
                     variant="ghost"
                     size="lg"
-                    icon={<BsTwitter size="28px" />}
+                    icon={<AiOutlineFileText size="28px" />}
                     _hover={{
                       bg: "blue.500",
                       color: useColorModeValue("white", "gray.700"),
@@ -102,7 +105,7 @@ const ContactForm: FC<ContactFormProps> = ({ onSuccess, onFailure }) => {
                   />
                 </Box>
 
-                <Box as="a" href="#">
+                <Box as="a" href={resume.contact.linkedin}>
                   <IconButton
                     aria-label="linkedin"
                     variant="ghost"
