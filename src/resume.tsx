@@ -1,6 +1,14 @@
 import { Text } from "@chakra-ui/react";
 import { ReactNode } from "react";
 
+import CaptivateIQ from "../src/assets/CIQ.webp";
+import Meta from "../src/assets/Meta.webp";
+import Milliman from "../src/assets/Milliman.webp";
+import PreparedResponse from "../src/assets/PreparedResponse.webp";
+import SPIE from "../src/assets/SPIE.webp";
+import TAGNW from "../src/assets/TAGNW.webp";
+import WesternWashingtonUniversity from "../src/assets/WWU.webp";
+
 type JobType = {
   thumbnail: string;
   company: string;
@@ -46,21 +54,20 @@ type ResumeType = {
 
 const resume: ResumeType = {
   education: {
-    thumbnail:
-      "https://d28htnjz2elwuj.cloudfront.net/wp-content/uploads/2017/09/29151258/Western-logo_no-background.png",
+    thumbnail: WesternWashingtonUniversity,
     school_name: "Western Washington University",
     arrival: "Fall 2011",
     departure: "Spring 2016",
     focus: "Computer Science",
     courses: [
+      "Machine Learning",
+      "Artificial Intelligence",
+      "Data Mining",
       "Datastructures + Algorithms II",
       "Database Systems",
       "Unix Development",
       "Object Oriented Design",
       "Statistical Methods",
-      "Machine Learning",
-      "Artificial Intelligence",
-      "Data Mining",
     ],
   },
   contact: {
@@ -77,7 +84,7 @@ const resume: ResumeType = {
       { skillName: "Typescript", comfort: 80, experience: 4 },
       { skillName: "Cypress", comfort: 60, experience: 1 },
       { skillName: "Storybook", comfort: 60, experience: 1 },
-      { skillName: "Responsive Design", comfort: 80, experience: 5 },
+      { skillName: "Responsiveness", comfort: 80, experience: 5 },
       { skillName: "React Query", comfort: 70, experience: 1 },
       { skillName: "REST Clients", comfort: 80, experience: 5 },
       { skillName: "GraphQL", comfort: 60, experience: 2 },
@@ -105,8 +112,7 @@ const resume: ResumeType = {
   },
   jobs: [
     {
-      thumbnail:
-        "https://media-exp1.licdn.com/dms/image/C4D0BAQGrENtM2FHN_A/company-logo_200_200/0/1661456653923?e=2147483647&v=beta&t=ISPVjJluLBuEje-VTXaZDp0R8HhuL23a6xb3uHp3IY0",
+      thumbnail: CaptivateIQ,
       company: "CaptivateIQ",
       position: "Senior Software Engineer",
       description: (
@@ -125,8 +131,7 @@ const resume: ResumeType = {
       ],
     },
     {
-      thumbnail:
-        "https://e7.pngegg.com/pngimages/984/326/png-clipart-meta-thumbnail-social-media-icons.png",
+      thumbnail: Meta,
       company: "Meta Reality Labs",
       position: "Software Engineer II",
       description: (
@@ -149,8 +154,7 @@ const resume: ResumeType = {
       ],
     },
     {
-      thumbnail:
-        "https://e7.pngegg.com/pngimages/984/326/png-clipart-meta-thumbnail-social-media-icons.png",
+      thumbnail: Meta,
       company: "Meta Reality Labs",
       position: "Software Engineer",
       description: (
@@ -162,8 +166,7 @@ const resume: ResumeType = {
       skills: ["React", "Javascript", "PHP", "MySQL", "GraphQL"],
     },
     {
-      thumbnail:
-        "https://www.logolynx.com/images/logolynx/f1/f12ac0b2a1db96e6ee7b72e6b75b4027.jpeg",
+      thumbnail: Milliman,
       company: "Milliman",
       position: "Software Engineer",
       description: (
@@ -175,8 +178,7 @@ const resume: ResumeType = {
       skills: ["C#", "Angular", "WPF", "CI/CD", "Azure", "Git", "RESTful APIs"],
     },
     {
-      thumbnail:
-        "https://www.tagnw.org/wp-content/uploads/2021/09/TAGNW-logo-horiz-primary.png",
+      thumbnail: TAGNW,
       company: "Technology Alliance Group (NW)",
       position: "Backend Developer",
       description: (
@@ -188,16 +190,14 @@ const resume: ResumeType = {
       skills: ["Python", "Flask", "RESTful APIs", "Wordpress", "Git"],
     },
     {
-      thumbnail:
-        "https://payload.cargocollective.com/1/1/54817/7995435/SPIE_black.png",
+      thumbnail: SPIE,
       company: "SPIE",
       position: "Frontend Developer",
       description: <Text>Redesigned the landing website.</Text>,
       skills: ["C#", "Razor", ".NET", "IIS", "HTML", "CSS", "Javascript"],
     },
     {
-      thumbnail:
-        "https://ww1.prweb.com/prfiles/2014/10/14/12249916/RR%20Square%20Large.png",
+      thumbnail: PreparedResponse,
       company: "Prepared Response",
       position: "Frontend Developer",
       description: (

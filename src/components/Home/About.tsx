@@ -12,7 +12,7 @@ import {
 import { FC } from "react";
 import { FileIcon, GithubIcon, LinkedInIcon } from "../Misc/SocialIcons";
 
-import profilePhoto from "../../assets/profile_photo.png";
+import profilePhoto from "../../assets/ProfilePhoto.webp";
 import resume from "../../resume";
 import { LinkItem } from "../Misc/Misc";
 
@@ -40,12 +40,12 @@ const About: FC<AboutProps> = () => {
 
         <Heading
           lineHeight="1"
-          fontSize={{ base: "3rem", md: "5rem", lg: "6.25rem" }}
+          fontSize={{ base: "2.25rem", md: "5rem", lg: "6.25rem" }}
           letterSpacing="tight"
         >
-          I build{" "}
+          I Build{" "}
           <Box as="span" color="brown.600">
-            Scalable Applications
+            Modern Applications
           </Box>
         </Heading>
       </Box>

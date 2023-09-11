@@ -31,7 +31,7 @@ const TableRow: FC<TableRowProps> = ({ skillName, experience, comfort }) => {
       </Td>
       <Td>
         <i>
-          {experience} year{experience === 1 ? "" : "s"}
+          {experience} yr{experience === 1 ? "" : "s"}
         </i>
       </Td>
       <Td>
@@ -54,7 +54,7 @@ const SkillsCard: FC<SkillsCardProps> = ({ title, skills }) => {
             <Thead>
               <Tr>
                 <Th>Skill</Th>
-                <Th>Experience</Th>
+                <Th>Exp.</Th>
                 <Th>Comfort</Th>
               </Tr>
             </Thead>

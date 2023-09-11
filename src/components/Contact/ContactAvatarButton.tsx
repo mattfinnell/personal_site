@@ -1,6 +1,6 @@
 import { Avatar, Button, Stack } from "@chakra-ui/react";
 import { FC } from "react";
-import profilePicture from "../../assets/profile_photo.png";
+import profilePicture from "../../assets/ProfilePhoto.webp";
 
 type ContactAvatarButtonProps = {};
 const ContactAvatarButton: FC<ContactAvatarButtonProps> = () => {

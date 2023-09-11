@@ -7,17 +7,13 @@ import {
   SimpleGrid,
   Spacer,
   Square,
-  Table,
-  TableContainer,
-  Td,
   Text,
-  Tr,
   VStack,
 } from "@chakra-ui/react";
 import { FC } from "react";
 import resume from "../../resume";
 import SectionDivider from "../Misc/SectionDivider";
-const _ = require("lodash");
+import CourseTable from "./CourseTable";
 
 type EducationProps = {};
 const Education: FC<EducationProps> = () => {
@@ -31,43 +27,38 @@ const Education: FC<EducationProps> = () => {
           <HStack>
             <Square
               position={"relative"}
-              size="4rem"
+              size={{ base: "6rem", sm: "10rem" }}
               float="left"
               marginRight="6"
               overflow="hidden"
             >
               <Image
-                boxSize="100px"
+                boxSize="150px"
                 objectFit="scale-down"
                 src={resume.education.thumbnail}
                 fallbackSrc="https://via.placeholder.com/100"
                 backgroundColor="white"
               />
             </Square>
-            <Heading size="lg">{resume.education.school_name}</Heading>
+            <Heading size={{ base: "md", sm: "lg" }}>
+              {resume.education.school_name}
+            </Heading>
             <Spacer />
-            <Text>
+            <Text display={{ base: "none", md: "block" }}>
               <i>
                 {resume.education.arrival} - {resume.education.departure}
               </i>
             </Text>
           </HStack>
+          <Text display={{ base: "block", md: "none" }}>
+            <i>
+              {resume.education.arrival} - {resume.education.departure}
+            </i>
+          </Text>
           <Text marginTop="4" fontSize="2xl">
             {resume.education.focus}
           </Text>
-          <TableContainer>
-            <Table size="sm">
-              {_.chunk(resume.education.courses, 4).map(
-                (courseRow: Array<string>) => (
-                  <Tr>
-                    {courseRow.map((course) => (
-                      <Td>{course}</Td>
-                    ))}
-                  </Tr>
-                ),
-              )}
-            </Table>
-          </TableContainer>
+          <CourseTable />
           <SimpleGrid
             marginTop={3}
             spacingX={3}
