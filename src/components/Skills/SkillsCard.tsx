@@ -60,8 +60,9 @@ const SkillsCard: FC<SkillsCardProps> = ({ title, skills }) => {
             </Thead>
             {skills
               .sort((a, b) => -(a.comfort - b.comfort))
-              .map((skill) => (
+              .map((skill, i) => (
                 <TableRow
+                  key={i}
                   skillName={skill.skillName}
                   experience={skill.experience}
                   comfort={skill.comfort}

@@ -54,7 +54,11 @@ const NavigationBar: FC<NavigationBarProps> = ({ routes }) => {
             </HStack>
           </HStack>
           <Flex alignItems={"center"}>
-            <Button onClick={toggleColorMode} marginRight={2}>
+            <Button
+              onClick={toggleColorMode}
+              marginRight={2}
+              aria-label={colorMode === "light" ? "Dark Mode" : "Light Mode"}
+            >
               {colorMode === "light" ? <MoonIcon /> : <SunIcon />}
             </Button>
             <ContactAvatarButton />

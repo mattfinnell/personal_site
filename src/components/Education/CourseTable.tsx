@@ -1,7 +1,7 @@
 import { Table, TableContainer, Td, Tr } from "@chakra-ui/react";
+import { chunk } from "lodash";
 import { FC } from "react";
 import resume from "../../resume";
-const _ = require("lodash");
 
 type CourseTableProps = {};
 const CourseTable: FC<CourseTableProps> = () => {
@@ -9,11 +9,11 @@ const CourseTable: FC<CourseTableProps> = () => {
     <>
       <TableContainer display={{ base: "table", sm: "none" }}>
         <Table size="sm">
-          {_.chunk(resume.education.courses, 1).map(
+          {chunk(resume.education.courses, 1).map(
             (courseRow: Array<string>) => (
-              <Tr>
+              <Tr key={courseRow.toString()}>
                 {courseRow.map((course) => (
-                  <Td>{course}</Td>
+                  <Td key={course}>{course}</Td>
                 ))}
               </Tr>
             ),
@@ -22,11 +22,11 @@ const CourseTable: FC<CourseTableProps> = () => {
       </TableContainer>
       <TableContainer display={{ base: "none", sm: "table", md: "none" }}>
         <Table size="sm">
-          {_.chunk(resume.education.courses, 2).map(
+          {chunk(resume.education.courses, 2).map(
             (courseRow: Array<string>) => (
-              <Tr>
+              <Tr key={courseRow.toString()}>
                 {courseRow.map((course) => (
-                  <Td>{course}</Td>
+                  <Td key={course}>{course}</Td>
                 ))}
               </Tr>
             ),
@@ -35,11 +35,11 @@ const CourseTable: FC<CourseTableProps> = () => {
       </TableContainer>
       <TableContainer display={{ base: "none", md: "table" }}>
         <Table size="sm">
-          {_.chunk(resume.education.courses, 4).map(
+          {chunk(resume.education.courses, 4).map(
             (courseRow: Array<string>) => (
-              <Tr>
+              <Tr key={courseRow.toString()}>
                 {courseRow.map((course) => (
-                  <Td>{course}</Td>
+                  <Td key={course}>{course}</Td>
                 ))}
               </Tr>
             ),

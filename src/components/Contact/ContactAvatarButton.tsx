@@ -16,9 +16,15 @@ const ContactAvatarButton: FC<ContactAvatarButtonProps> = () => {
         variant={"link"}
         cursor={"pointer"}
         minW={0}
+        aria-label="Matt"
         onClick={() => {}}
       >
-        <Avatar size={"sm"} src={profilePicture} />
+        <Avatar
+          size={"sm"}
+          src={profilePicture}
+          iconLabel="Avatar"
+          getInitials={(_) => "MF"}
+        />
       </Button>
     </Stack>
   );

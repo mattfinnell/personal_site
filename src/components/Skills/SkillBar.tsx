@@ -10,6 +10,7 @@ const SkillBar: FC<SkillBarProps> = ({ comfort }) => {
         hasStripe={true}
         size="sm"
         value={comfort}
+        aria-label={`comfort ${comfort} percent`}
       />
     </Box>
   );

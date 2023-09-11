@@ -4,7 +4,6 @@ import {
   HStack,
   Heading,
   Image,
-  SimpleGrid,
   Spacer,
   Square,
   Text,
@@ -38,6 +37,7 @@ const Education: FC<EducationProps> = () => {
                 src={resume.education.thumbnail}
                 fallbackSrc="https://via.placeholder.com/100"
                 backgroundColor="white"
+                alt={`School Logo - ${resume.education.school_name}`}
               />
             </Square>
             <Heading size={{ base: "md", sm: "lg" }}>
@@ -59,12 +59,6 @@ const Education: FC<EducationProps> = () => {
             {resume.education.focus}
           </Text>
           <CourseTable />
-          <SimpleGrid
-            marginTop={3}
-            spacingX={3}
-            spacingY={2}
-            columns={{ base: 3, md: 5 }}
-          ></SimpleGrid>
         </VStack>
       </Card>
     </Box>

@@ -40,6 +40,7 @@ const JobCard: FC<JobCardProps> = ({
             objectFit="scale-down"
             src={thumbnail}
             fallbackSrc="https://via.placeholder.com/100"
+            alt={`Company Logo ${company}`}
           />
         </Square>
         <Heading size="lg">{company}</Heading>
@@ -53,7 +54,7 @@ const JobCard: FC<JobCardProps> = ({
         columns={{ base: 3, md: 5 }}
       >
         {skills.map((skill) => (
-          <SkillChip label={skill} />
+          <SkillChip label={skill} key={skill} />
         ))}
       </SimpleGrid>
     </VStack>
