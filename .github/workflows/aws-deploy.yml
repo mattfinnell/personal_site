@@ -7,7 +7,7 @@ on:
 
 jobs:
   deploy:
-    runs-on: ubuntu-latest
+    runs-on: 20-alpine3.17
     steps:
       - uses: actions/checkout@main
       - uses: jeanlescure/react-deploy-to-s3-action@main
