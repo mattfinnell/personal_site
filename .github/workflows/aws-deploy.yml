@@ -9,14 +9,18 @@ jobs:
   deploy:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@main
-      - uses: actions/setup-node@v3
+      - name: Checkout
+        uses: actions/checkout@main
+      - name: Setup Node
+        uses: actions/setup-node@v3
         with:
           node-version: 20
-      - uses: jeanlescure/react-deploy-to-s3-action@main
+      - name: Build
+        run: yarn build
+      - name: Setup AWS
+        uses: aws-actions/configure-aws-credentials@v3
         with:
-          args: --acl public-read --follow-symlinks --delete
-        env:
-          AWS_S3_BUCKET: ${{ secrets.AWS_S3_BUCKET }}
-          AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
-          AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+          role-to-assume: ${{ secrets.AWS_IAM_ROLE }}
+          aws-region: us-west-2
+      - name: Show Current Directory
+        run: ls -al
