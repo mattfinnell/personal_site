@@ -10,6 +10,7 @@ import {
 import { ElementType, PropsWithChildren, SVGProps } from "react";
 
 export function MainHeading(props: HeadingProps) {
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
   const { colorMode, toggleColorMode } = useColorMode();
 
   return (

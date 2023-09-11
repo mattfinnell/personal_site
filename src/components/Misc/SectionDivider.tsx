@@ -1,10 +1,10 @@
 import { Box, Flex, useColorModeValue } from "@chakra-ui/react";
 import { FC, ReactNode } from "react";
 
-type SectionDivider = {
+type SectionDividerProps = {
   children: ReactNode;
 };
-const SectionDivider: FC<SectionDivider> = ({ children }) => {
+const SectionDivider: FC<SectionDividerProps> = ({ children }) => {
   return (
     <Box>
       <Flex
