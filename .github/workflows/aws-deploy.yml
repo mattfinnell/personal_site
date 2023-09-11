@@ -12,6 +12,7 @@ jobs:
       id-token: write
       contents: read
     steps:
+      # Standard Build
       - name: Checkout
         uses: actions/checkout@main
       - name: Setup Node
@@ -22,10 +23,14 @@ jobs:
         run: yarn install
       - name: Build
         run: yarn build
+
+      # AWS Deployment Operations
       - name: Configure AWS
         uses: aws-actions/configure-aws-credentials@v3
         with:
           role-to-assume: ${{ secrets.AWS_IAM_ROLE }}
           aws-region: us-east-2
-      - name: Show Current Directory
-        run: ls -al
+      - name: Upload to S3
+        run: aws s3 sync build ${{ secrets.AWS_S3_BUCKET }}
+      - name: Invalidate Cloudfront
+        run: aws cloudfront create-invalidation --distribution-id ${{ secrets.AWS_CLOUDFRONT_DISTRIBUTION_ID }} --paths /\*
