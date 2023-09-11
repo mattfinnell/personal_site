@@ -11,7 +11,8 @@
         "dbaeumer.vscode-eslint",
         "esbenp.prettier-vscode",
         "oderwat.indent-rainbow",
-        "aaron-bond.better-comments"
+        "aaron-bond.better-comments",
+        "GitHub.vscode-github-actions"
       ],
       "settings": {
         "editor.formatOnSave": true,
