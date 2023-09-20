@@ -11,11 +11,11 @@ const Skills: FC<SkillsProps> = () => {
       <SectionDivider>
         <Heading>Skills</Heading>
       </SectionDivider>
-      <SimpleGrid columns={{ lg: 2 }} marginTop={16} spacing={12}>
+      <SimpleGrid columns={{ lg: 2 }} marginTop={16} spacing={16}>
         <SkillsCard title="Frontend Skills" skills={resume.skills.frontend} />
         <SkillsCard title="Backend Skills" skills={resume.skills.backend} />
       </SimpleGrid>
-      <SimpleGrid columns={{ lg: 2 }} marginTop={16} spacing={12}>
+      <SimpleGrid columns={{ lg: 2 }} marginTop={16} spacing={16}>
         <SkillsCard title="Devops Skills" skills={resume.skills.devops} />
         <SkillsCard
           title="Supplemental Skills"
