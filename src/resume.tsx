@@ -27,6 +27,7 @@ type Skills = {
   frontend: Array<Skill>;
   backend: Array<Skill>;
   devops: Array<Skill>;
+  supplemental: Array<Skill>;
 };
 
 type ContactInformationType = {
@@ -83,7 +84,7 @@ const resume: ResumeType = {
       { skillName: "CSS", comfort: 60, experience: 7 },
       { skillName: "Typescript", comfort: 80, experience: 4 },
       { skillName: "Cypress", comfort: 60, experience: 1 },
-      { skillName: "Storybook", comfort: 60, experience: 1 },
+      { skillName: "Storybook", comfort: 70, experience: 1 },
       { skillName: "Responsiveness", comfort: 80, experience: 5 },
       { skillName: "React Query", comfort: 70, experience: 1 },
       { skillName: "REST Clients", comfort: 80, experience: 5 },
@@ -104,10 +105,17 @@ const resume: ResumeType = {
       { skillName: "Linux", comfort: 80, experience: 7 },
       { skillName: "Git", comfort: 90, experience: 7 },
       { skillName: "Github", comfort: 90, experience: 7 },
-      { skillName: "CI/CD", comfort: 70, experience: 5 },
+      { skillName: "CI/CD", comfort: 80, experience: 5 },
       { skillName: "Docker", comfort: 70, experience: 4 },
-      { skillName: "AWS", comfort: 60, experience: 1 },
-      { skillName: "Observability", comfort: 60, experience: 1 },
+      { skillName: "AWS", comfort: 60, experience: 3 },
+      { skillName: "Observability", comfort: 75, experience: 3 },
+    ],
+    supplemental: [
+      { skillName: "Agile Methodologies", comfort: 90, experience: 5 },
+      { skillName: "Presentational Skills", comfort: 90, experience: 10 },
+      { skillName: "Mentorship", comfort: 75, experience: 2 },
+      { skillName: "PyTorch", comfort: 50, experience: 1 },
+      { skillName: "SciKit-Learn", comfort: 60, experience: 2 },
     ],
   },
   jobs: [
@@ -117,8 +125,9 @@ const resume: ResumeType = {
       position: "Senior Software Engineer",
       description: (
         <Text>
-          Contributed to the development of the <i>What-If</i> feature and
-          championed system Observability.
+          Contributed to the frontend and backend development of the{" "}
+          <i>What-If</i> product feature and guided better system observability
+          for company wide adoption.
         </Text>
       ),
       skills: [
@@ -137,7 +146,7 @@ const resume: ResumeType = {
       description: (
         <Text>
           Backend and Frontend Development on many internal tools for Oculus
-          Research from Start to Finish. Mentored multiple small teams of
+          Research from start to finish. Mentored multiple small teams of
           software engineers across these projects.
         </Text>
       ),
@@ -193,16 +202,19 @@ const resume: ResumeType = {
       thumbnail: SPIE,
       company: "SPIE",
       position: "Frontend Developer",
-      description: <Text>Redesigned the landing website.</Text>,
+      description: (
+        <Text>
+          Redesigned the landing website along with implementing new portals
+          features for different users.
+        </Text>
+      ),
       skills: ["C#", "Razor", ".NET", "IIS", "HTML", "CSS", "Javascript"],
     },
     {
       thumbnail: PreparedResponse,
       company: "Prepared Response",
       position: "Frontend Developer",
-      description: (
-        <Text>Re-Designed and Re-Implemented the entire website.</Text>
-      ),
+      description: <Text>Developed an entirely new company website.</Text>,
       skills: ["HTML", "CSS", "Javascript", "git"],
     },
   ],

@@ -53,7 +53,8 @@ const About: FC<AboutProps> = () => {
       <Box maxWidth={{ lg: "27.5rem" }} marginTop="4">
         <Text fontSize={{ base: "lg", md: "2xl" }}>
           An engineer of nearly 10 years with strong frontend and backend
-          skills. Product Driven with a passion for <i>Better Engineering</i>.
+          skills. Passionate about Distributed Systems and Machine Learning, I
+          am Product Driven with a drive for <i>Better Engineering</i>.
         </Text>
 
         {/* Profile links */}
