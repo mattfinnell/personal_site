@@ -79,10 +79,11 @@ const resume: ResumeType = {
   },
   skills: {
     frontend: [
-      { skillName: "React", comfort: 90, experience: 4 },
+      { skillName: "React", comfort: 90, experience: 5 },
       { skillName: "HTML", comfort: 90, experience: 7 },
       { skillName: "CSS", comfort: 60, experience: 7 },
       { skillName: "Typescript", comfort: 80, experience: 4 },
+      { skillName: "Javascript", comfort: 75, experience: 6 },
       { skillName: "Cypress", comfort: 60, experience: 1 },
       { skillName: "Storybook", comfort: 70, experience: 1 },
       { skillName: "Responsiveness", comfort: 80, experience: 5 },
@@ -91,7 +92,7 @@ const resume: ResumeType = {
       { skillName: "GraphQL", comfort: 60, experience: 2 },
     ],
     backend: [
-      { skillName: "Python", comfort: 90, experience: 5 },
+      { skillName: "Python", comfort: 90, experience: 6 },
       { skillName: "Django", comfort: 60, experience: 4 },
       { skillName: "REST APIs", comfort: 70, experience: 5 },
       { skillName: "Firebase", comfort: 60, experience: 1 },
